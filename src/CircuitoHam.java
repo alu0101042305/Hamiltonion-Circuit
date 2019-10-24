@@ -11,21 +11,11 @@ import java.util.Scanner;
 
 public class CircuitoHam {
 	
-	ArrayList<Gadget> gadgets; // Gadgets del grafo
-	ArrayList<String> idNodos; // Array que almacena los id de los nodos
-	Grafo completo; // Grafo completo
-	int numNodos; // Numero de nodos del grafo completo, incluidos los de los gadgets
-	
-	/**
-	 * Constructor por defecto
-	 */
-	public CircuitoHam () {
-		this.gadgets = new ArrayList<Gadget>();
-		this.idNodos = new ArrayList<String>();
-		this.completo = new Grafo("HC");
-		this.numNodos = 0;
-	}
-
+	ArrayList<Gadget> gadgets = new ArrayList<Gadget>(); // Gadgets del grafo
+	ArrayList<String> idNodos = new ArrayList<String>(); // Array que almacena los id de los nodos
+	Grafo completo = new Grafo("HC"); // Grafo completo
+	int numNodos = 0; // Numero de nodos del grafo completo, incluidos los de los gadgets
+        
 	/**
 	 * Metodo que genera el grafo completo sobre el que calcular el Camino Hamiltoniano
 	 * Primero carga el vertex cover, luego agrega los selectores (1 por cada nodo del VC)
@@ -50,23 +40,19 @@ public class CircuitoHam {
 		}
 		
 		// Agregar los gadgets, uno por cada arista
-		for (int i = 0; i < vertex.getAristas().size(); i++) {
-			String idGadget = "GD_";
-			if (vertex.enCubrimiento(vertex.getAristas().get(i).getNodoA()))
-				idGadget += vertex.getAristas().get(i).getNodoA().getId() + "-" + vertex.getAristas().get(i).getNodoB().getId();
-			else
-				idGadget += vertex.getAristas().get(i).getNodoB().getId() + "-" + vertex.getAristas().get(i).getNodoA().getId();
-			Gadget aux = new Gadget (idGadget);
-			this.addGadget(aux);
-		}
+                for(Arista arista : vertex.getAristas()) {
+                    String idGadget = "GD_";
+                    if (vertex.enCubrimiento(arista.getNodoA()))
+                            idGadget += arista.getNodoA().getId() + "-" + arista.getNodoB().getId();
+                    else
+                            idGadget += arista.getNodoB().getId() + "-" + arista.getNodoA().getId();
+                    addGadget(new Gadget (idGadget));
+                }
 		
 		for (int i = 0; i < vertex.getCubrimiento().size(); i++)
 		{
 			// Incluir un nodo nuevo por cada uno en el cubrimiento (selectores)
-			Nodo nuevo = new Nodo();
-			String idNuevo = "nodoHC_" + (i+1);
-			nuevo.setId(idNuevo);
-			this.completo.addNodo(nuevo);
+			completo.addNodo(new Nodo("nodoHC_" + (i + 1)));
 			
 			// Si el gadget pertenece a una arista de ese vertice hacer las conexiones
 			int indiceGadget1 = -1;

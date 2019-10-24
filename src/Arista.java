@@ -32,12 +32,7 @@ public class Arista {
 	 * @return True en caso de que la arista conecte el nodo buscado
 	 */
 	public boolean contieneNodo (String valor) {
-		if ((this.getNodoA().getId().equals(valor)) || (this.getNodoB().getId().equals(valor))) {
-			return true;
-		}
-		else
-			return false;
-			
+                return (this.getNodoA().getId().equals(valor)) || (this.getNodoB().getId().equals(valor));
 	}
 	
 	/**

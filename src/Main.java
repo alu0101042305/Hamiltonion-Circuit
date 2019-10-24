@@ -7,8 +7,8 @@
 public class Main {
 
 	public static void main(String[] args) {
-		CircuitoHam hc = new CircuitoHam();
-		hc.cargarCircuito();
+            CircuitoHam hc = new CircuitoHam();
+            hc.cargarCircuito();
 	    hc.resolverCircuito();
 	}
 }
