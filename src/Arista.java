@@ -2,7 +2,6 @@
  * Universidad de La Laguna - Grado de Ingenieria Informatica <p>
  * Complejidad Computacional - Circuito Hamiltoniano <p>
  * Arista.java - Clase para representar una arista de un grafo, conecta un nodo A con otro nodo B
- * @author Grupo 2 - Juan, Richard, Jesus
  */
 public class Arista {
 	

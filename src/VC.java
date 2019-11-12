@@ -7,7 +7,6 @@ import java.util.ArrayList;
  * Universidad de La Laguna - Grado de Ingenieria Informatica <p>
  * Complejidad Computacional - Circuito Hamiltoniano <p>
  * VC.java - Clase para representar una entrada del vertex cover, hereda de Grafo
- * @author Grupo 2 - Juan, Richard, Jesus
 */
 public class VC extends Grafo {
 

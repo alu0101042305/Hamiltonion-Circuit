@@ -4,7 +4,6 @@ import java.util.ArrayList;
  * Universidad de La Laguna - Grado de Ingenieria Informatica <p>
  * Complejidad Computacional - Circuito Hamiltoniano <p>
  * Gadget.java - Clase para representar los cover testing del circuito hamiltoniano, hereda de Grafo
- * @author Grupo 2 - Juan, Richard, Jesus
  */
 
 public class Gadget extends Grafo {

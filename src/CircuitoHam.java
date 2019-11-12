@@ -6,7 +6,6 @@ import java.util.Scanner;
  * Universidad de La Laguna - Grado de Ingenieria Informatica <p>
  * Complejidad Computacional - Circuito Hamiltoniano <p>
  * CircuitoHam.java - Clase para la construccion del circuito hamiltoniano
- * @author Grupo 2 - Juan, Richard, Jesus
  */
 
 public class CircuitoHam {

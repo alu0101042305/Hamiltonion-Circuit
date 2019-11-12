@@ -1,2 +1,2 @@
-# Hamiltonion-Circuit
+# Hamiltonian-Circuit
 Trabajo para Complejidad Computacional

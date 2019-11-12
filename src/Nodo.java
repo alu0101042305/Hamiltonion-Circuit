@@ -2,7 +2,6 @@
  * Universidad de La Laguna - Grado de Ingenieria Informatica <p>
  * Complejidad Computacional - Circuito Hamiltoniano <p>
  * Nodo.java - Clase para representar un nodo de un grafo
- * @author Grupo 2 - Juan, Richard, Jesus
  */
 public class Nodo {
 

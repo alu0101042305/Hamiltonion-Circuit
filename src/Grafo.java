@@ -4,7 +4,6 @@ import java.util.ArrayList;
  * Universidad de La Laguna - Grado de Ingenieria Informatica <p>
  * Complejidad Computacional - Circuito Hamiltoniano <p>
  * Grafo.java - Clase para representar un grafo
- * @author Grupo 2 - Juan, Richard, Jesus
  */
 public class Grafo {
 	
